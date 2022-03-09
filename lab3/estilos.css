@@ -1,0 +1,57 @@
+*{
+font-family: 'Fredoka', sans-serif;
+}
+
+fieldset:nth-child(even){background: grey}
+
+fieldset:nth-child(odd){background: dimgrey
+}
+
+a:link{
+background:#A0A0A0;
+}
+
+a:visited{
+color: blue;
+}
+
+a:hover{
+background: 	#D3D3D3;
+}
+
+a:active{
+background: 	#D3D3D3;
+}
+
+tr:nth-child(even) {background: #D3D3D3}
+tr:nth-child(odd) {background: grey}
+
+pre{font-family:Cursive}
+
+[type="submit"]{background: #D3D3D3}
+
+[src*="small"]{border: 5px solid #555;}
+
+#intro:first-letter{
+font-size: 300%;
+color: red;
+}
+
+#nome{
+display:block;
+}
+#apelido{
+display:block;
+}
+#email{
+display:block;
+}
+
+img{
+border: 5px solid black;
+border-radius: 25px;
+}
+iframe{
+border: 5px solid black;
+border-radius: 25px;
+}

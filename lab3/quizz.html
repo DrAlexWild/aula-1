@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilos.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Local</title>
+
+    <meta name="author" content="Ricardo Gonçalves">
+    <meta name="keywords" content="palavras chave">
+    <meta name="description" content="Website sobre Los Angeles">
+    <link rel="shortcut icon" type="images/x-icon" href="images/Devil-emoticon.ico"/>
+    <meta name="author" content="Ricardo Gonçalves">
+    <meta name="keywords" content="city">
+    <meta name="description" content="Website sobre Los Angeles">
+
+</head>
+<body  style="background-color:paleturquoise">
+
+<header>
+    <meta name="description" content="Website about Los Angeles">
+    <link rel="shortcut icon" type="images/x-icon" href="images/Devil-emoticon.ico"/>
+</header>
+<main>
+    <h1><b>Quizz</b></h1>
+    <figure>
+        <img src="images/los-angeles.jpg">
+        <figcaption>los angeles panoramic view</figcaption>
+    </figure>
+    <br>
+    <section>
+        <nav>
+            <ul>
+                <li>
+                    <i class="material-icons">high_quality</i>
+                    <a href="index.html">Introdução</a>
+                </li>
+                <li>
+                    <i class="material-icons">business</i>
+                    <a href="local.html">Localização</a>
+                </li>
+                <li>
+                    <i class="material-icons">camera_alt</i>
+                    <a href="multimedia.html">Multimédia</a>
+                </li>
+                <li>
+                    <i class="material-icons">info</i>
+                    <a href="info.html">Informações</a>
+                </li>
+                <li>
+                    <i class="material-icons">code</i>
+                    <a href="html5-css.html">Html5-css</a>
+                </li>
+                <li>
+                    <i class="material-icons">videogame_asset</i>
+                    <a href="quizz.html">Quizz</a>
+                </li>
+                <li>
+                    <i class="material-icons">home</i>
+                    <a href="../index.html">Home</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <section>
+        <h3>Quizz</h3>
+        <p>
+            On this web page there is a Quizz to test your knowledge about Los Angeles
+        </p>
+    </section>
+
+    <section>
+        <form method="POST" action="mailto: ricardogoncalves126@gmail.com" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Los Angeles Quizz</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+                <label for="apelido">Apelido:</label>
+                <input type="text" id="apelido" name="apelido">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </fieldset>
+
+            <fieldset>
+                <legend>Questions</legend>
+                <label for="sigla">Acronym of Los Angeles:</label>
+                <input maxlength="2" type="text" id="sigla" name="sigla"><br><br>
+
+                <p>Please select the Population of Los Angeles in the year 2020:</p>
+                <input type="radio" id="population0" name="population" value="3 898 747">
+                <label for="population0">3 898 747</label><br>
+                <input type="radio" id="population1" name="population" value="2 898 747">
+                <label for="population1">2 898 747</label><br>
+                <input type="radio" id="population2" name="population" value="2 298 747">
+                <label for="population2">2 298 747</label>
+
+                <p>Please select the Game that happens in Los Angeles</p>
+                <input type="checkbox" id="game1" name="game1" value="Grand Theft Auto">
+                <label for="game1"> Grand Theft Auto</label><br>
+                <input type="checkbox" id="game2" name="game2" value="DOOM Eternal">
+                <label for="game2"> DOOM Eternal</label><br>
+                <input type="checkbox" id="game3" name="game3" value="Sims 7">
+                <label for="game3"> Sims 7</label><br><br>
+
+                <p> The date of Los Angeles Foundation</p>
+                <input type="date" id="foundation_date" name="foundation_date">
+
+                <p>Pin point the location of Los Angeles in California State</p>
+                <input type="image" size="10" autofocus id="map_point" name="map_point" src="images/california_map.png" width="400" height="300" placeholder="california_map">
+
+                <p>The left color of the Los Angeles City Flag</p>
+                <input type="color" id="flag_color" name="flag_color">
+
+                <p>The number of Home Sport Teams in Los Angeles </p>
+                <input type="number" id="number_teams" name="number_teams" max="15" min="8">
+
+                <p>How Great is Los Angeles</p>
+                <p>Boring<input type="range" required id="amazing_rate" name="amazing_rate">Amazing</p>
+
+                <p>Sport Team Based in Los Angeles</p>
+                <select id="nba_teams" name="nba_teams">
+                    <option>Giants</option>
+                    <option>Lakers</option>
+                    <option>Bulls</option>
+                    <option>Mavericks</option>
+                </select>
+
+                <br>
+
+                <label for="political">Choose the Current Political side of Los Angeles:</label>
+                <input list="political_list" name="political" id="political">
+                <datalist id="political_list">
+                    <option value="Democratic">
+                    <option value="Republican">
+                    <option value="Other">
+                </datalist>
+
+                <p>Leave a Comment</p>
+                <textarea></textarea>
+                <br>
+                <input type="submit">
+
+            </fieldset>
+
+        </form>
+    </section>
+
+    <section>
+        <footer>
+            Ricardo Gonçalves a22005012 ULHT 2º ano
+        </footer>
+    </section>
+</main>
+</body>
+</html>
