@@ -1,0 +1,44 @@
+
+*{box-sizing: border-box}
+*{background-color:lightgrey}
+
+a:visited{
+color:black;
+}
+
+.labs{
+display: flex;
+flex-flow: row wrap;
+justify-content: space-around;
+align-items: space-around;
+background-color: darkgrey;
+padding:50px;
+}
+
+.labs > div{
+  display: flex;
+  justify-content: space-around;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px black;
+  margin:10px;
+}
+
+.labs img{
+border-radius: 20px 0 0 20px;
+height:170px;
+width:400px;
+}
+
+.labs a{
+width:160px;
+height:90px;
+background-color:#cc9900;
+padding:20px;
+border-radius:0 20px 20px 0;
+height:170px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+}
+

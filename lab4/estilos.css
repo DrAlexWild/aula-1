@@ -1,0 +1,247 @@
+
+*{box-sizing: border-box}
+*{font-family: 'Hurricane', cursive;}
+
+
+
+.capitais{
+display: flex;
+flex-flow: row wrap;
+justify-content: space-around;
+align-items: space-around;
+background-color: lightblue;
+padding:50px;
+}
+
+.capitais > div{
+  display: flex;
+  justify-content: space-around;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px black;
+  margin:10px;
+}
+
+.capitais img{
+border-radius: 20px 0 0 20px;
+height:100%
+}
+
+.capital_info{
+width:150px;
+background-color:white;
+padding:20px;
+border-radius:0 20px 20px 0;
+
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.menu{
+display:flex;
+background-color:lightgrey;
+}
+
+a{
+padding:15px;
+text-decoration:none;
+color:black;
+border-color:black;
+border-style:solid;
+border-radius: 20px;
+margin: 3px;
+}
+
+a:hover{
+background-color:grey;
+font-weight:bold;
+}
+
+.menu a:last-child{
+margin-left:auto;
+}
+
+.header{
+font-family: 'Fredoka', sans-serif;
+font-size: 30px;
+padding:50px;
+display:flex;
+justify-content:center;
+align-items:center;
+background-image: url('images/pattern.jpg');
+background-size:contain;
+}
+
+.dicas{
+display:flex;
+flex-flow: row wrap;
+justify-content: space-around;
+align-items: space-around;
+background-color:white;
+}
+
+.dicas > div{
+border-radius: 20px;
+box-shadow: 5px 5px 15px black;
+margin:10px;
+padding: 10px 20px
+}
+
+.item1 {
+grid-area: item1;
+background: rgba(0, 0, 0, .45)  url('images/porto.jpg');
+background-blend-mode: darken;
+background-size:cover;
+}
+.item2 {
+grid-area: item2;
+background: rgba(0, 0, 0, .45)  url('images/lisboa.jpg');
+background-blend-mode: darken;
+background-size:cover;
+}
+.item3 {
+grid-area: item3;
+background: rgba(0, 0, 0, .45) url('images/faro.jpg');
+background-blend-mode: darken;
+background-size:cover;
+}
+.item4 {
+grid-area: item4;
+}
+.item5 {
+grid-area: item5;
+background: rgba(0, 0, 0, .45) url('images/aveiro.jpg');
+background-blend-mode: darken;
+background-size:cover;
+}
+.item6 {
+grid-area: item6;
+background: rgba(0, 0, 0, .45) url('images/sesimbra.jpg');
+background-blend-mode: darken;
+background-size:cover;
+}
+
+.i4_image {
+grid-area: i4_image;
+}
+
+.i4_frase {
+grid-area: i4_frase;
+}
+
+.i4_button {
+grid-area: i4_button;
+}
+
+.item4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas:
+                        'i4_image i4_image '
+                        'i4_frase i4_button';
+
+    gap: 10px;
+    padding: 20px;
+
+}
+
+.i4_button{
+position:relative;
+top:30px;
+}
+
+@media(min-width:901px){
+    .destinos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+                        'item1 item2 item3 item4 item4'
+                        'item5 item5 item6 item4 item4';
+    height:600px;
+    gap: 10px;
+    background-color:lightblue;
+    padding:20px;
+    }
+
+    .destinos p{
+          color:white;
+          position:relative;
+          top:130px;
+          left:5px;
+    }
+
+    .destinos h2 {
+          color:white;
+          position:relative;
+          top:150px;
+          left:5px;
+    }
+
+    .destinos h3 {
+              color:white;
+              position:relative;
+              top:5px;
+              left:5px;
+        }
+
+
+    .item4 p{
+          color:white;
+          position:relative;
+          top:415px;
+          left:5px;
+    }
+
+    .item4 h2 {
+          color:white;
+          position:relative;
+          top:430px;
+          left:5px;
+    }
+}
+
+@media(max-width:900px){
+    .destinos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+                        'item1 item2'
+                        'item3 item6'
+                        'item5 item5'
+                        'item4 item4';
+    height:1700px;
+    gap: 10px;
+    background-color:lightblue;
+
+    }
+
+    .destinos p{
+          color:white;
+          position:relative;
+          top:170px;
+          left:5px;
+    }
+
+    .destinos h2 {
+          color:white;
+          position:relative;
+          top:190px;
+          left:5px;
+    }
+
+    .destinos h3 {
+              color:white;
+              position:relative;
+              top:15px;
+              left:5px;
+        }
+}
+
+.i4_button a{
+background:white;
+}
+
+
