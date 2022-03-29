@@ -1,6 +1,9 @@
 
 *{box-sizing: border-box}
-*{background-color:lightgrey}
+*{
+background-color:#cc9900;
+
+}
 
 a:visited{
 color:black;
@@ -40,5 +43,14 @@ display:flex;
 justify-content:center;
 align-items:center;
 text-decoration:none;
+}
+
+.labs{
+  background-image: url("images/fixed.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  align-items: start;
 }
 

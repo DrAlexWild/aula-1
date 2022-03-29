@@ -1,0 +1,469 @@
+
+*{box-sizing: border-box}
+*{font-family: 'Hurricane', cursive;}
+body{
+background-color:#e6814e;
+}
+
+
+.capitais{
+display: flex;
+flex-flow: row wrap;
+justify-content: space-around;
+align-items: space-around;
+background-color:#e6814e;
+padding:50px;
+  height: 80vh;
+  background-image: url("images/fixed.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  align-items: start;
+}
+
+.capitais > div{
+  display: flex;
+  justify-content: space-around;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px black;
+  margin:10px;
+}
+
+.capitais img{
+border-radius: 20px 0 0 20px;
+height:100%
+}
+
+.capital_info{
+width:150px;
+background-color:lightblue;
+padding:20px;
+border-radius:0 20px 20px 0;
+
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.menu{
+display:flex;
+background-color:gold;
+}
+
+.menu_container{
+position:sticky;
+top:0;
+z-index:10;
+}
+
+a{
+padding:15px;
+text-decoration:none;
+color:black;
+border-color:black;
+border-style:solid;
+border-radius: 20px;
+margin: 3px;
+}
+
+a:hover{
+background-color:grey;
+font-weight:bold;
+}
+
+.menu a:last-child{
+margin-left:auto;
+}
+
+.header{
+font-size: 30px;
+padding:50px;
+display:flex;
+height:90vh;
+background-image: url('images/travel.jpg');
+background-size:cover;
+background-repeat:no-repeat;
+}
+
+.header p{
+color:gold;
+border-radius: 20px;
+background-color:black;
+height:12%;
+width:260px;
+padding:5px;
+box-shadow: 30px 20px 40px gold;
+font: 30px Papyrus, sans-serif;
+}
+
+.dicas{
+display:flex;
+flex-flow: row wrap;
+justify-content: space-around;
+align-items: space-around;
+background-color:#e6814e;
+}
+
+.dicas > div{
+border-radius: 20px;
+box-shadow: 5px 5px 15px black;
+margin:10px;
+padding: 10px 20px;
+background-color:lightblue;
+}
+
+.item1 {
+grid-area: item1;
+background: rgba(0, 0, 0, .45)  url('images/porto.jpg');
+background-blend-mode: darken;
+background-size:cover;
+}
+.item2 {
+grid-area: item2;
+background: rgba(0, 0, 0, .45)  url('images/lisboa.jpg');
+background-blend-mode: darken;
+background-size:cover;
+}
+.item3 {
+grid-area: item3;
+background: rgba(0, 0, 0, .45) url('images/faro.jpg');
+background-blend-mode: darken;
+background-size:cover;
+}
+.item4 {
+grid-area: item4;
+}
+.item5 {
+grid-area: item5;
+background: rgba(0, 0, 0, .45) url('images/aveiro.jpg');
+background-blend-mode: darken;
+background-size:cover;
+}
+.item6 {
+grid-area: item6;
+background: rgba(0, 0, 0, .45) url('images/sesimbra.jpg');
+background-blend-mode: darken;
+background-size:cover;
+}
+
+.i4_image {
+grid-area: i4_image;
+}
+
+.i4_frase {
+grid-area: i4_frase;
+}
+
+.i4_button {
+grid-area: i4_button;
+}
+
+.item4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas:
+                        'i4_image i4_image '
+                        'i4_frase i4_button';
+
+    gap: 10px;
+    padding: 20px;
+
+}
+
+.i4_button{
+position:relative;
+top:30px;
+}
+
+@media(min-width:901px){
+    .destinos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+                        'item1 item2 item3 item4 item4'
+                        'item5 item5 item6 item4 item4';
+    height:600px;
+    gap: 10px;
+    padding:20px;
+    }
+
+    .destinos p{
+          color:white;
+          position:relative;
+          top:130px;
+          left:5px;
+    }
+
+    .destinos h2 {
+          color:white;
+          position:relative;
+          top:150px;
+          left:5px;
+    }
+
+    .destinos h3 {
+              color:white;
+              position:relative;
+              top:5px;
+              left:5px;
+        }
+
+
+    .item4 p{
+          color:white;
+          position:relative;
+          top:415px;
+          left:5px;
+    }
+
+    .item4 h2 {
+          color:white;
+          position:relative;
+          top:430px;
+          left:5px;
+    }
+}
+
+@media(max-width:900px){
+    .destinos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+                        'item1 item2'
+                        'item3 item6'
+                        'item5 item5'
+                        'item4 item4';
+    height:1700px;
+    gap: 10px;
+    }
+
+    .destinos p{
+          color:white;
+          position:relative;
+          top:170px;
+          left:5px;
+    }
+
+    .destinos h2 {
+          color:white;
+          position:relative;
+          top:190px;
+          left:5px;
+    }
+
+    .destinos h3 {
+              color:white;
+              position:relative;
+              top:15px;
+              left:5px;
+        }
+}
+
+.destinos{
+background-color:lightblue;
+border-radius:20px;
+}
+
+.destinos div{
+border-radius:20px;
+}
+
+.i4_button a{
+background-color:gold;
+}
+
+
+.animacao {
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr;
+grid-template-areas:
+                    'animacao1 animacao2'
+                    'animacao3 animacao4';
+height:300px;
+gap: 10px;
+}
+
+.animacao1{
+text-align: center;
+  animation-name:  roda;  /* experimente a animação roda-encolhe */
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes roda {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+.animacao2{
+  text-align: center;
+  position: relative;
+  animation-name:  move_cor;  /* experimente a animação roda-encolhe */
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move_cor {
+  0%   { left:0px; top:0px;}
+  25%  { left:20px; top:0px;}
+  50%  {left:20px; top:20px;}
+  75%  { left:0px; top:20px;}
+  100% { left:0px; top:0px;}
+}
+
+.animacao3{
+text-align: center;
+  animation-name:  pulse;  /* experimente a animação roda-encolhe */
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  from {transform: scale(1, 1);}
+  to {transform: scale(0.5, 0.5);}
+}
+
+.animacao4{
+text-align: center;
+  animation-name:  angled;  /* experimente a animação roda-encolhe */
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes angled {
+  from {transform: skew(15deg,0deg);}
+  to {transform: skew(0deg,30deg);}
+}
+
+@media(min-width:901px){
+    .fotos{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1r 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+                        'foto1 foto2 foto3'
+                        'foto4 foto5 foto6'
+                        'foto7 foto8 foto9'
+                        'foto10 foto11 foto11';
+    height:600px;
+    gap:30px;
+    margin: 10px;
+    }
+}
+
+@media(max-width:600px){
+    .fotos{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+                        'foto1'
+                        'foto2'
+                        'foto3'
+                        'foto4'
+                        'foto5'
+                        'foto6'
+                        'foto7'
+                        'foto8'
+                        'foto9'
+                        'foto10'
+                        'foto11'
+                        'foto12';
+    height:400px;
+    gap:30px;
+    margin: 10px;
+    }
+}
+
+@media(max-width:900px){
+    .fotos{
+    display:grid;
+    grid-template-columns: 1fr 1ft;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+                        'foto1 foto2'
+                        'foto3 foto4'
+                        'foto5 foto6'
+                        'foto7 foto8'
+                        'foto9 foto10'
+                        'foto11 foto12';
+    height:400px;
+    gap:30px;
+    margin: 10px;
+    }
+}
+
+.fotos img:hover {
+filter: brightness(50%);
+}
+
+.fotos div{
+position: relative;
+text-align:center;
+height:300px;
+}
+
+.fotos p{
+  position: absolute;
+  bottom:5px;
+  display:none
+}
+
+
+.fotos1:hover #fotos1_t{
+color: white;
+display:block;
+}
+.fotos2:hover #fotos2_t{
+color: white;
+display:block;
+}
+.fotos3:hover #fotos3_t{
+color: white;
+display:block;
+}
+.fotos4:hover #fotos4_t{
+color: white;
+display:block;
+}
+.fotos5:hover #fotos5_t{
+color: white;
+display:block;
+}
+.fotos6:hover #fotos6_t{
+color: white;
+display:block;
+}
+.fotos7:hover #fotos7_t{
+color: white;
+display:block;
+}
+.fotos8:hover #fotos8_t{
+color: white;
+display:block;
+}
+.fotos9:hover #fotos9_t{
+color: white;
+display:block;
+}
+.fotos10:hover #fotos10_t{
+color: white;
+display:block;
+}
+.fotos11:hover #fotos11_t{
+color: white;
+display:block;
+}
+.fotos12:hover #fotos12_t{
+color: white;
+display:block;
+}
+
+
+
+
