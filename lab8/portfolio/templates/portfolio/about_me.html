@@ -20,82 +20,44 @@
             <a>Contact</a>
         </div>
     </div>
-    <div class="skills">
-        <div class="skill" id="skill_0">
-            <h1>Python</h1>
+    <div class="languages">
+        {% for language in languages %}
+        <div class="language">
+            <h1>{{language.nome}}</h1>
             <pre>
-Random text Random text Random text
-Random text Random text
-Random text Random text Random text Random text
+                {{language.descricao}}
+                {{language.ano}}
             </pre>
             <a>link to related project</a>
         </div>
-        <div class="skill" id="skill_1">
-            <h1>Web Programming</h1>
-            <pre>Random text</pre>
-            <a>link to related project</a>
-        </div>
-        <div class="skill" id="skill_2">
-            <h1>Java</h1>
-            <pre>Random text</pre>
-            <a>link to related project</a>
-        </div>
-        <div class="skill" id="skill_3">
-            <h1>Web Scrapping</h1>
-            <pre>Random text</pre>
-            <a>link to related project</a>
-        </div>
+        {% endfor %}
 
     </div>
     <div class="cadeiras">
-        <div class="cadeira_0">
-            <h1>Web Programming 2022</h1>
-            {% load static %}
-            <img src="{% static 'portfolio/images/web_programming.jpg' %}">
+        {% for class in classes %}
+        <div class="cadeira">
+            <h1>{{class.nome}}</h1>
+            <img src="{{ class.image.url|default_if_none:'#' }}">
             <pre>
-Aproached Topics: Html, CSS, Django Framework, Python.
-On this class we talked about Html and design features
-like grid-layout, flexbox, view-port, animations, Django
-framework and deploy and some Python in the back-end
-
-ECTS: 5
-Teachers:<a href="https://www.ulusofona.pt/docentes/lucio-miguel-studer-ferreira"> Lucio Strudder </a>
-Projects: This Portofolio and some leading up webpages
-Ranking: * * * * .
+{{class.descricao}}
+Languages:{% for language in class.linguagens.all %}{{language.nome}}; {% endfor %}
+ECTS: {{class.ects}}
+Theoretical Teachers:<a href="{{class.docente_teorica.link}}"> {{class.docente_teorica.nome}} </a>
+Pratical Teachers:{% for docente_pratica in class.docentes_praticas.all %}<a href="{{docente_pratica.link}}"> {{docente_pratica.nome}} </a>; {% endfor %}
+Projects: {{class.projetos.nome}}.
             </pre>
         </div>
-        <div class="cadeira_1">
-            <h1>Web Programming 2022</h1>
-            {% load static %}
-            <img src="{% static 'portfolio/images/web_programming.jpg' %}">
-            <pre>
-Aproached Topics: Html, CSS, Django Framework, Python.
-On this class we talked about Html and design features
-like grid-layout, flexbox, view-port, animations, Django
-framework and deploy and some Python in the back-end
+        {% endfor %}
+    </div>
+    <div class="hobbies">
+        {% for hobbie in hobbies %}
+        <div class="hobbie">
+            <h1>{{hobbie.name}}</h1>
+            <img src="{{ hobbie.image.url|default_if_none:'#' }}">
+            <p>{{hobbie.description}} <a href="{{hobbie.link}}">{{hobbie.link}}</a></p>
 
-ECTS: 5
-Teachers:<a href="https://www.ulusofona.pt/docentes/lucio-miguel-studer-ferreira"> Lucio Strudder </a>
-Projects: This Portofolio and some leading up webpages
-Ranking: * * * * .
-            </pre>
         </div>
-        <div class="cadeira_2">
-            <h1>Web Programming 2022</h1>
-            {% load static %}
-            <img src="{% static 'portfolio/images/web_programming.jpg' %}">
-            <pre>
-Aproached Topics: Html, CSS, Django Framework, Python.
-On this class we talked about Html and design features
-like grid-layout, flexbox, view-port, animations, Django
-framework and deploy and some Python in the back-end
-
-ECTS: 5
-Teachers:<a href="https://www.ulusofona.pt/docentes/lucio-miguel-studer-ferreira"> Lucio Strudder </a>
-Projects: This Portofolio and some leading up webpages
-Ranking: * * * * .
-            </pre>
-        </div>
+        {%endfor%}
     </div>
     <div class="footer">
         <p>

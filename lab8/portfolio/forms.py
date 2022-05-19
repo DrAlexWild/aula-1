@@ -1,7 +1,13 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Tarefa
 from .models import Blog_Post
+
+from .models import Class
+from .models import Project
+from .models import Professor
+from .models import Language
+from .models import Hobbie
+from .models import Quiz
 
 
 """class TarefaForm(ModelForm):
@@ -53,6 +59,57 @@ class BlogPostForm(ModelForm):
             'titulo': 'Title',
             'descricao': 'Description',
             'image': 'Image',
+        }
+
+
+        # texto auxiliar a um determinado campo do formulário
+        help_texts = {}
+
+class Professor(ModelForm):
+    link = forms.CharField(required=False)
+    class Meta:
+        model = Professor
+        fields = '__all__'
+
+class Class(ModelForm):
+    class Meta:
+        model = Class
+        fields = '__all__'
+
+class Project(ModelForm):
+    class Meta:
+        model = Project
+        fields = '__all__'
+
+class Language(ModelForm):
+    class Meta:
+        model = Language
+        fields = '__all__'
+
+class  Hobbie(ModelForm):
+    image = forms.ImageField(required=False)
+    link = forms.CharField(required=False)
+    class Meta:
+        model = Hobbie
+        fields = '__all__'
+
+
+class QuizForm(ModelForm):
+    class Meta:
+        model = Quiz
+        fields = '__all__'
+
+        # texto a exibir junto à janela de inserção
+        labels = {
+            #when was django launched: 2005
+            'question_0': 'when was django launched',
+            #whats the programming language most often used with django: Python
+            'question_1': 'whats the programming language most often used with django',
+            #whats the file extension most often used to add style to an html file: css
+            'question_2': 'whats the file extension most often used to add style to an html file',
+            #to display multiple elements inside a div we can use display: :flex
+            'question_3': 'to display multiple elements inside a div we can use display',
+            'name': 'the name you would like to display on the leaderboard'
         }
 
 

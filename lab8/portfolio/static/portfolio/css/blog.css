@@ -117,7 +117,6 @@ html, body , .container {
 
 .description {
   grid-area: description;
-  display: flex;
   flex-flow: column wrap;
   justify-content: left;
   padding: 1px 10px;
@@ -150,6 +149,8 @@ html, body , .container {
 
 .description img{
  object-fit: scale-down;
+ max-height: 600px;
+ width: auto;
 }
 
 

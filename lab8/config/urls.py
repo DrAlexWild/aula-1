@@ -36,7 +36,11 @@ urlpatterns = [
     path('about_me', views.about_me_page_view, name='about_me'),
     path('blog', views.blog_page_view, name='blog'),
     path('edita/<int:blog_post_id>', views.edita_blog_post_view, name='edita'),
+    path('apaga/<int:blog_post_id>', views.apaga_blog_post_view, name='apaga'),
     path('nova/', views.nova_blog_post_view, name='nova'),
+    path('web_programming/', views.web_programming_view, name='web_programming'),
+    path('login/', views.login_view, name='login'),
+    path('logout/', views.logout_view, name='logout'),
 ]
 
 #para imagens

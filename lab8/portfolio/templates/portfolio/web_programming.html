@@ -1,6 +1,6 @@
 
 {% load static %}
-<link rel="stylesheet" href="{% static 'portfolio/css/new_edit_post.css' %}">
+<link rel="stylesheet" href="{% static 'portfolio/css/web_programming.css' %}">
 
 <body>
 <div class="container">
@@ -20,23 +20,27 @@
             <a>Contact</a>
         </div>
     </div>
-{% block main %}
-<div class="post_form">
-<h3>Nova tarefa</h3>
 
-<form action="" method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
+    <div class="quiz">
+        <h1>Web Programming Quiz</h1>
+        {% load static %}
+        <img src="/static/portfolio/images/my_graph.png">
+        <h2>{{winner_names}}</h2>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
 
 
-    <input type="submit" value="Gravar" class="btn btn-success" >
-</form>
-</div>
-{% endblock %}
+            <input type="submit" value="Submit" class="btn btn-success" >
+    </div>
+
+    <div class="labs">
+
+    </div>
 
     <div class="footer">
         <p>
-            Line para mapa do site
+            Lina para mapa do site
         </p>
         <p>
             contact: ricardogoncalves126@gmail.com
